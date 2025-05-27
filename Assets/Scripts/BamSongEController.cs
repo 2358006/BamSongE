@@ -12,7 +12,7 @@ public class BamSongEController : MonoBehaviour
     {
         GetComponent<Rigidbody>().AddForce(dir);
         Game_Manager.instance.isShoot = true;
-        Invoke("ShootOut", 3f);
+        Invoke("ShootOut", 0.7f);
     }
 
     void OnCollisionEnter(Collision collision)
