@@ -2188,7 +2188,7 @@ MonoBehaviour:
   extraPoint: 1
   Upgradedemand: 10
   score: 0
-  haveBamsonge: 0
+  click: 0
   scoreText: {fileID: 1640382643}
   gameTurnText: {fileID: 1047879481}
   upgradedemandText: {fileID: 354354028}
