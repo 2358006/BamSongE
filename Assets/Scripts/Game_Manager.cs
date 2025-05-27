@@ -6,10 +6,10 @@ public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance { get; private set; } // 싱글톤
 
-    public int extraPoint = 1;
-    public int Upgradedemand = 10;
+    public int extraPoint = 1;  // 점수
+    public int Upgradedemand = 10;  // 업그레이드 요구량
     public int score = 0; // 점수 
-    public int haveBamsonge = -10; // 남은 횟수
+    public int click = -0; // 남은 횟수
 
     public Text scoreText; // 점수 텍스트
     public Text gameTurnText; // 게임 턴 텍스트
@@ -29,11 +29,12 @@ public class Game_Manager : MonoBehaviour
         }
     }
 
+// UI 업데이트
     void FixedUpdate()
     {
         scoreText.text = $"Score : {score}";
         upgradedemandText.text = $"UpgradeDemand : {Upgradedemand}";
-        gameTurnText.text = $"Click : {haveBamsonge}";
+        gameTurnText.text = $"Click : {click}";
     }
 
     void Awake()
@@ -56,12 +57,12 @@ public class Game_Manager : MonoBehaviour
         Debug.Log(score);
     }
 
-    // 턴 진행 
+    // 클릭횟수
     public void GameTurn()
     {
         if (isPlaying)
         {
-            haveBamsonge++;
+            click++;
         }
 
         if (score >= 100)
