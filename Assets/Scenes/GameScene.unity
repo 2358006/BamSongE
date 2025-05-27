@@ -1066,7 +1066,7 @@ MonoBehaviour:
   bamsongEPrefab: {fileID: 1381384742472365188, guid: f6ef75d97fac60242bfcee4942e12a04, type: 3}
   minPower: 1000
   maxPower: 3000
-  chargeSpeed: 500
+  chargeSpeed: 5000
   powerSlider: {fileID: 535103523}
 --- !u!1 &1212227174
 GameObject:
@@ -1669,7 +1669,6 @@ MonoBehaviour:
   scoreText: {fileID: 1640382643}
   gameTurnText: {fileID: 1047879481}
   isShoot: 0
-  isCharging: 0
   isPlaying: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1680,8 +1679,8 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 376310146}
   - {fileID: 524156369}
-  - {fileID: 1065837682}
-  - {fileID: 2145436504}
   - {fileID: 1595028230}
   - {fileID: 1464061228}
   - {fileID: 1810003651}
+  - {fileID: 1065837682}
+  - {fileID: 2145436504}

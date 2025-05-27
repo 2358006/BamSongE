@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using NUnit.Framework;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -15,8 +14,7 @@ public class Game_Manager : MonoBehaviour
     public Text gameTurnText; // 게임 턴 텍스트
 
     public bool isShoot; // 슈팅 여부
-    public bool isCharging; // 파워 차징 여부
-    public bool isPlaying; // 게임 진행가능 여부
+    public bool isPlaying = true; // 게임 진행가능 여부
 
     void Awake()
     {
@@ -30,7 +28,6 @@ public class Game_Manager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
 
     // 점수 상승
     public void UpScore()

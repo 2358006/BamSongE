@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BamSongEController : MonoBehaviour
 {
-    void Awake()
+    void Start()
     {
         Application.targetFrameRate = 60;
     }
