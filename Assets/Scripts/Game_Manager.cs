@@ -2,13 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using NUnit.Framework;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Game_Manager : MonoBehaviour
 {
     public static Game_Manager instance { get; private set; } // 싱글톤
 
+    public int extraPoint = 1;
     public int score = 0; // 점수 
-    public int haveBamsonge = 10; // 남은 횟수
+    public int haveBamsonge = 9999; // 남은 횟수
 
 
     public Text scoreText; // 점수 텍스트
@@ -17,6 +19,19 @@ public class Game_Manager : MonoBehaviour
     public bool isShoot; // 슈팅 여부
     public bool isCharging; // 파워 차징 여부
     public bool isPlaying; // 게임 진행가능 여부
+
+    // 점수 업그레이드
+    public void Upgrade()
+    {
+        if (score > 10)
+        {
+            extraPoint *= 2;
+            score -= 10;
+            Debug.Log(extraPoint);
+            Debug.Log(score);
+        }
+    }
+
 
     void Awake()
     {
@@ -35,8 +50,9 @@ public class Game_Manager : MonoBehaviour
     // 점수 상승
     public void UpScore()
     {
-        score += 10;
+        score += 10 + extraPoint;
         scoreText.text = $"Score : {score}";
+        Debug.Log(score);
     }
 
     // 턴 진행 
