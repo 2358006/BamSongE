@@ -2,15 +2,12 @@ using UnityEngine;
 
 public class TargetMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    float moveTarget;
     void Update()
     {
-        
+        if (transform.position.x >= 10 || transform.position.x <= -10)
+        {
+            moveTarget *= -1;
+        }
     }
 }
